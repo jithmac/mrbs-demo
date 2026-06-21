@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MRBS - Business Studies by Bhashana Ihalagedara</title>
+  <meta name="description" content="නින්ද නොයන BS පන්තිය. Join the best A/L Business Studies classes by Bhashana Ihalagedara.">
+  <meta property="og:title" content="MRBS - Business Studies">
+  <meta property="og:description" content="නින්ද නොයන BS පන්තිය. Join the best A/L Business Studies classes.">
+  <meta property="og:image" content="/assets/hero-business-stack.jpg">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Sans+Sinhala:wght@600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- LADDER RAIL -->
+  <nav class="ladder-rail" aria-label="Section navigation">
+    <div class="rail-track"></div>
+    <div class="rail-progress" id="rail-progress"></div>
+    <div class="ladder-icon" id="ladder-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3L1 9L12 15L21 10.09V17H23V9L12 3M12 12.8L4.34 9L12 5.2L19.66 9L12 12.8M19 14V19H5V14H3V21H21V14H19Z"/></svg>
+    </div>
+    
+    <button class="rung" data-target="#hero" aria-label="Go to Hero section">
+      <span class="rung-label">Home</span>
+    </button>
+    <button class="rung" data-target="#proof" aria-label="Go to Stats section">
+      <span class="rung-label">At a Glance</span>
+    </button>
+    <button class="rung" data-target="#about" aria-label="Go to About Teacher section">
+      <span class="rung-label">The Teacher</span>
+    </button>
+    <button class="rung" data-target="#why" aria-label="Go to Why MRBS section">
+      <span class="rung-label">Why Us</span>
+    </button>
+    <button class="rung" data-target="#classes" aria-label="Go to Classes section">
+      <span class="rung-label">Class Info</span>
+    </button>
+    <button class="rung" data-target="#strip" aria-label="Go to Entrepreneurship section">
+      <span class="rung-label">Entrepreneurship</span>
+    </button>
+    <button class="rung" data-target="#lms" aria-label="Go to LMS section">
+      <span class="rung-label">LMS Login</span>
+    </button>
+    <button class="rung" data-target="#footer" aria-label="Go to Contact section">
+      <span class="rung-label">Contact</span>
+    </button>
+  </nav>
+
+  <!-- LOGO -->
+  <header class="top-chrome">
+    <div class="brand">MRBS</div>
+  </header>
+
+  <main>
+    <!-- RUNG 1: HERO -->
+    <section id="hero" class="ladder-section">
+      <div class="hero-parallax-container">
+        <!-- Parallax Layers -->
+        <div class="parallax-layer bg-layer">
+           <div class="watermark-pattern"></div>
+        </div>
+        <div class="parallax-layer mid-layer">
+        </div>
+        <div class="parallax-layer fg-layer">
+          <div class="rocket-wrapper" tabindex="0" role="button" aria-label="Boost rocket">
+            <svg class="rocket-svg" viewBox="0 0 100 150">
+              <path class="rocket-body" d="M50 10 C30 50, 30 100, 30 100 L70 100 C70 100, 70 50, 50 10 Z" fill="var(--paper-grey)"/>
+              <path class="rocket-fin left" d="M30 100 L10 120 L30 110 Z" fill="var(--ladder-red)"/>
+              <path class="rocket-fin right" d="M70 100 L90 120 L70 110 Z" fill="var(--ladder-red)"/>
+            </svg>
+            <div class="flame-trail"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-content">
+        <h1>
+          Business Studies <span class="grades">(A/L)</span><br>
+          <span class="tagline-container" aria-label="නින්ද නොයන BS පන්තිය">
+            <span class="typewriter-text"></span><span class="caret"></span>
+          </span>
+        </h1>
+        <p class="subtitle">By Bhashana Ihalagedara</p>
+        <button class="magnetic-btn cta-lms" id="hero-lms-btn">LMS එකට යන්න</button>
+      </div>
+    </section>
+
+    <!-- RUNG 2: PROOF STRIP -->
+    <section id="proof" class="ladder-section">
+      <div class="container coins-grid">
+        <button class="flip-coin" aria-label="Reveal Stat">
+          <div class="coin-inner">
+            <div class="coin-front">?</div>
+            <div class="coin-back">5+ Years</div>
+          </div>
+        </button>
+        <button class="flip-coin" aria-label="Reveal Stat">
+          <div class="coin-inner">
+            <div class="coin-front">?</div>
+            <div class="coin-back">Grade 12 & 13</div>
+          </div>
+        </button>
+        <button class="flip-coin" aria-label="Reveal Stat">
+          <div class="coin-inner">
+            <div class="coin-front">?</div>
+            <div class="coin-back">100% Online</div>
+          </div>
+        </button>
+        <button class="flip-coin" aria-label="Reveal Stat">
+          <div class="coin-inner">
+            <div class="coin-front">?</div>
+            <div class="coin-back">Recordings</div>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <!-- RUNG 3: ABOUT -->
+    <section id="about" class="ladder-section">
+      <div class="container about-container">
+        <button class="medallion-btn" aria-label="Reveal Teacher Details">
+          <div class="medallion-visual">MRBS</div>
+        </button>
+        <div class="bio-reveal-area">
+          <div class="bio-content">
+            <h2>Bhashana Ihalagedara</h2>
+            <!-- AI-GENERATED BIO: review before launch -->
+            <p>Bhashana Ihalagedara is an experienced Business Studies educator specializing in the A/L Sinhala medium curriculum for Grade 12 and 13 students. With 5 years of teaching experience and an MBM in Marketing & Management (Special) from the University of Kelaniya, he is recognized for producing the best A/L results among Kandy classes. Operating entirely online to maximize student convenience, his structured approach encompasses Theory, Revision, and Paper classes to guarantee continuous growth.</p>
+            <ul class="qualifications">
+              <li>MBM in Marketing, Management (Special) — University of Kelaniya</li>
+              <li>5 Years Experience</li>
+              <li>Best A/L results among Kandy classes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RUNG 4: WHY MRBS -->
+    <section id="why" class="ladder-section">
+      <div class="carousel-container">
+        <h2 class="section-title">Why MRBS?</h2>
+        <div class="carousel-track-wrapper">
+          <div class="carousel-track">
+            <div class="carousel-panel">
+              <div class="motif rocket-motif"></div>
+              <h3>Online Convenience</h3>
+              <p>Learn from anywhere without wasting time on travel.</p>
+            </div>
+            <div class="carousel-panel">
+              <div class="motif recording-motif"></div>
+              <h3>Recordings Included</h3>
+              <p>Never miss a lesson. Review at your own pace.</p>
+            </div>
+            <div class="carousel-panel">
+              <div class="motif medallion-motif"></div>
+              <h3>Best Results</h3>
+              <p>A proven track record among Kandy classes.</p>
+            </div>
+            <div class="carousel-panel">
+              <div class="motif compass-motif"></div>
+              <h3>Strategy-Driven</h3>
+              <p>A structured approach to A/L success.</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-progress"><div class="carousel-progress-bar"></div></div>
+      </div>
+    </section>
+
+    <!-- RUNG 5: CLASSES -->
+    <section id="classes" class="ladder-section">
+      <div class="container classes-container">
+        <div class="orbit-dial-container">
+          <div class="orbit-dial" role="tablist" aria-label="Class Offerings">
+            <!-- Central subtle element -->
+            <div class="orbit-center" aria-hidden="true"></div>
+            <!-- Rotating indicator for active state -->
+            <div class="orbit-indicator" id="orbit-indicator" aria-hidden="true"></div>
+            
+            <button class="orbit-node node-theory" role="tab" aria-selected="true" aria-controls="panel-theory" id="tab-theory" data-target="theory" data-angle="0">
+              <svg class="node-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              <span class="node-label">Theory</span>
+            </button>
+            <button class="orbit-node node-revision" role="tab" aria-selected="false" aria-controls="panel-revision" id="tab-revision" data-target="revision" data-angle="90">
+              <svg class="node-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              <span class="node-label">Revision</span>
+            </button>
+            <button class="orbit-node node-paper" role="tab" aria-selected="false" aria-controls="panel-paper" id="tab-paper" data-target="paper" data-angle="180">
+              <svg class="node-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              <span class="node-label">Paper</span>
+            </button>
+            <button class="orbit-node node-recordings" role="tab" aria-selected="false" aria-controls="panel-recordings" id="tab-recordings" data-target="recordings" data-angle="270">
+              <svg class="node-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+              <span class="node-label">Recs</span>
+            </button>
+          </div>
+        </div>
+        <div class="class-details">
+          <div class="class-panel active" id="panel-theory" role="tabpanel" aria-labelledby="tab-theory">
+            <h3>Theory Class</h3>
+            <p>Comprehensive coverage of the Grade 12 & 13 syllabus from the ground up.</p>
+          </div>
+          <div class="class-panel" id="panel-revision" role="tabpanel" aria-labelledby="tab-revision" hidden>
+            <h3>Revision Class</h3>
+            <p>Targeted review of key concepts to solidify your understanding before exams.</p>
+          </div>
+          <div class="class-panel" id="panel-paper" role="tabpanel" aria-labelledby="tab-paper" hidden>
+            <h3>Paper Class</h3>
+            <p>Extensive past paper and model paper discussions.</p>
+          </div>
+          <div class="class-panel" id="panel-recordings" role="tabpanel" aria-labelledby="tab-recordings" hidden>
+            <h3>Recordings</h3>
+            <p>Access all sessions at your convenience through our LMS.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RUNG 6: ENTREPRENEURSHIP STRIP -->
+    <section id="strip" class="ladder-section darker-strip">
+      <div class="gears-bg">
+        <svg class="gear gear-1" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" stroke="var(--paper-grey)" stroke-width="2" stroke-dasharray="10 5" fill="none"/></svg>
+        <svg class="gear gear-2" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" stroke="var(--paper-grey)" stroke-width="2" stroke-dasharray="10 5" fill="none"/></svg>
+      </div>
+      <div class="marquee-wrapper">
+        <div class="marquee-track" aria-hidden="true">
+          <span>STRATEGY — GROWTH — VISION — LEADERSHIP — </span>
+          <span>STRATEGY — GROWTH — VISION — LEADERSHIP — </span>
+          <span>STRATEGY — GROWTH — VISION — LEADERSHIP — </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- RUNG 7: LMS GATEWAY -->
+    <section id="lms" class="ladder-section climax-section">
+      <div class="container text-center">
+        <h2>Ready to climb?</h2>
+        <div class="launch-sequence-container">
+          <!-- Rocket is injected/animated here on click -->
+        </div>
+        <button class="magnetic-btn cta-launch" id="btn-launch">Proceed to LMS</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- RUNG 8: FOOTER / CONTACT -->
+  <footer id="footer" class="ladder-section dark-footer">
+    <!-- Direction A: Ledger & Growth pattern -->
+    <div class="footer-bg" aria-hidden="true">
+      <div class="grid-pattern"></div>
+      <svg class="growth-chart" viewBox="0 0 1000 200" preserveAspectRatio="none">
+        <path d="M0,180 L150,160 L300,170 L450,110 L600,120 L750,50 L900,60 L1000,20" fill="none" stroke="var(--ladder-teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M0,180 L150,160 L300,170 L450,110 L600,120 L750,50 L900,60 L1000,20 L1000,200 L0,200 Z" fill="url(#chart-fade)" stroke="none"/>
+        <defs>
+          <linearGradient id="chart-fade" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="var(--ladder-teal)" stop-opacity="0.15"/>
+            <stop offset="100%" stop-color="var(--ladder-teal)" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+
+    <div class="container footer-content">
+      <div class="footer-brand">MRBS</div>
+      <div class="contact-block">
+        <p class="address">No. 63, Udalke Lane, Bowala, Kandy</p>
+        <p class="timetable-note">Timetable: Not finalized</p>
+        <div class="phones">
+          <a href="tel:0719697741" class="magnetic-btn mini-btn">071 969 7741</a>
+          <a href="tel:0721108284" class="magnetic-btn mini-btn">072 110 8284</a>
+        </div>
+        <p class="payment-method">Payment via Bank Transfer (Details in LMS)</p>
+      </div>
+      <div class="copyright">
+        <div>© 2026 Bhashana Ihalagedara. All rights reserved.</div>
+        <div class="developer-note">Developed by Panoralink Business Solutions (pvt) ltd.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!--
+  PRE-LAUNCH TODO:
+  [ ] Replace lms_url placeholder with real LMS link in script.js
+  [ ] Review AI-generated bio paragraph (Rung 3)
+  [ ] Confirm timetable copy once schedule is finalized
+  [ ] Add map embed once a Google Maps link is provided
+  [ ] Add social row once social links are provided
+  [ ] Verify every drag/hover interaction has a working mobile equivalent
+  [ ] Test with prefers-reduced-motion enabled — confirm nothing breaks/disappears
+  [ ] Test Sinhala font rendering + sizing on Android Chrome + iOS Safari
+  -->
+</body>
+</html>
