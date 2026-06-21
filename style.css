@@ -18,12 +18,8 @@
   --rail-width: 60px;
 }
 
-@media (max-width: 768px) {
-  :root {
-    --rail-width: 0px;
-    --rail-height: 60px;
-  }
-}
+
+
 
 * {
   box-sizing: border-box;
@@ -39,12 +35,8 @@ body {
   padding-left: var(--rail-width);
 }
 
-@media (max-width: 768px) {
-  body {
-    padding-left: 0;
-    padding-bottom: var(--rail-height);
-  }
-}
+
+
 
 .container {
   max-width: 1100px;
@@ -102,9 +94,7 @@ h2 {
   pointer-events: none;
   z-index: 50;
 }
-@media (max-width: 768px) {
-  .top-chrome { left: 0; }
-}
+
 .brand {
   font-size: 1.5rem;
   font-weight: 700;
@@ -204,39 +194,7 @@ h2 {
   transform: translateY(-50%) translateX(20px) scale(1);
 }
 
-@media (max-width: 768px) {
-  .ladder-rail {
-    top: auto;
-    bottom: 0;
-    width: 100%;
-    height: var(--rail-height);
-    flex-direction: row;
-    padding: 0 1rem;
-    background: var(--ink);
-  }
-  .rail-track {
-    top: 50%; left: 0; transform: translateY(-50%);
-    width: 100%; height: 2px; background: rgba(255,255,255,0.2);
-  }
-  .rail-progress {
-    top: 50%; left: 0; transform: translateY(-50%);
-    height: 2px; width: 0%;
-    background: linear-gradient(to right, var(--ladder-red), var(--ladder-yellow), var(--ladder-teal));
-  }
-  .ladder-icon {
-    top: 50%; left: 0; transform: translate(-50%, -50%);
-  }
-  .rung {
-    width: 8px; height: 20px; background: rgba(255,255,255,0.4);
-  }
-  .rung-label {
-    top: auto; bottom: 100%; left: 50%;
-    transform: translateX(-50%) translateY(10px) scale(0.9);
-  }
-  .rung:hover .rung-label, .rung:focus-visible .rung-label {
-    transform: translateX(-50%) translateY(-10px) scale(1);
-  }
-}
+
 
 /* Sections */
 .ladder-section {
@@ -597,9 +555,7 @@ h2 {
   align-items: center;
 }
 
-@media (max-width: 768px) {
-  .classes-container { grid-template-columns: 1fr; }
-}
+
 
 /* Orbit Dial Selector */
 .orbit-dial-container {
@@ -938,6 +894,289 @@ h2 {
 
 .developer-note {
   margin-top: 0.5rem;
+}
+
+/* ============================================================
+   MOBILE — Single consolidated block. All mobile rules live here.
+   Desktop rules above are NEVER touched.
+   ============================================================ */
+@media (max-width: 768px) {
+
+  /* --- Variables --- */
+  :root {
+    --rail-width: 0px;
+    --rail-height: 64px;
+  }
+
+  /* --- Body --- */
+  body {
+    padding-left: 0;
+    padding-bottom: var(--rail-height);
+  }
+
+  /* --- Sections --- */
+  .ladder-section {
+    min-height: auto;
+    min-height: 100dvh;
+    padding: 3rem 0;
+  }
+
+  /* --- Top Chrome / Brand --- */
+  .top-chrome {
+    left: 0;
+    padding: 1rem 1.25rem;
+  }
+
+  /* --- Bottom Navigation Rail --- */
+  .ladder-rail {
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    height: var(--rail-height);
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0 0.75rem;
+    background: var(--ink);
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .rail-track {
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.15);
+  }
+
+  .rail-progress {
+    top: 50%;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    transform: translateY(-50%);
+    background: linear-gradient(to right, var(--ladder-red), var(--ladder-yellow), var(--ladder-teal));
+  }
+
+  .ladder-icon {
+    top: 50%;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    transform: translate(-50%, -50%);
+  }
+
+  .rung {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.3);
+  }
+
+  .rung.filled {
+    background: var(--ladder-yellow);
+  }
+
+  .rung-label {
+    top: auto;
+    bottom: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%) scale(0.85);
+  }
+
+  .rung:hover .rung-label,
+  .rung:focus-visible .rung-label {
+    transform: translateX(-50%) scale(1);
+  }
+
+  /* --- Hero Section --- */
+  #hero {
+    padding: 5rem 1.25rem 3rem;
+    min-height: 70dvh;
+  }
+
+  .hero-content {
+    margin-top: 2vh;
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .tagline-container {
+    font-size: 1.2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    margin: 0.75rem 0 1.5rem;
+  }
+
+  .hero-content .magnetic-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .parallax-layer {
+    opacity: 1;
+    justify-content: center;
+    padding-right: 0;
+  }
+
+  .bg-layer::after {
+    background: linear-gradient(
+      to bottom,
+      rgba(244, 239, 230, 0.85) 0%,
+      rgba(244, 239, 230, 0.7) 50%,
+      rgba(244, 239, 230, 0.85) 100%
+    );
+  }
+
+  .rocket-wrapper {
+    display: none;
+  }
+
+  /* --- Proof Strip (Circle Tags) --- */
+  #proof {
+    min-height: auto;
+    padding: 2rem 0;
+  }
+
+  .coins-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    padding: 1.5rem 1rem;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .flip-coin {
+    height: 130px;
+    width: 130px;
+    margin: 0 auto;
+  }
+
+  .coin-front {
+    font-size: 2.2rem;
+  }
+
+  .coin-back {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
+
+  /* --- About Section --- */
+  .medallion-visual {
+    width: 120px;
+    height: 120px;
+    font-size: 1.5rem;
+  }
+
+  .bio-reveal-area {
+    padding: 1.5rem;
+  }
+
+  .bio-content p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  /* --- Carousel --- */
+  .carousel-container {
+    padding: 2rem 0;
+  }
+
+  .carousel-panel {
+    width: 80vw;
+    max-width: 300px;
+    height: auto;
+    min-height: 280px;
+    padding: 1.5rem;
+    scroll-snap-align: center;
+  }
+
+  /* --- Classes / Orbit Dial --- */
+  .classes-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .class-details {
+    height: auto;
+    min-height: 120px;
+  }
+
+  .class-panel h3 {
+    font-size: 1.8rem;
+  }
+
+  /* --- Entrepreneurship --- */
+  .gear {
+    width: 150px;
+    height: 150px;
+  }
+
+  .darker-strip {
+    min-height: 25vh;
+  }
+
+  /* --- LMS Climax --- */
+  .climax-section {
+    min-height: 50vh;
+  }
+
+  /* --- Footer --- */
+  .dark-footer {
+    padding: 4rem 1.25rem 3rem;
+  }
+
+  .footer-brand {
+    font-size: 2rem;
+  }
+
+  .phones {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+}
+
+/* --- Extra Small Screens (≤480px) --- */
+@media (max-width: 480px) {
+  #hero {
+    padding: 4.5rem 1rem 2.5rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .coins-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .flip-coin {
+    height: 120px;
+  }
+
+  .carousel-panel {
+    width: 85vw;
+  }
+
+  .orbit-dial {
+    gap: 0.5rem;
+    padding: 0.25rem;
+  }
+
+  .orbit-node {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .node-label {
+    font-size: 0.65rem;
+  }
 }
 
 /* Reduced Motion */
